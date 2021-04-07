@@ -43,7 +43,7 @@ Please use the command line below to transfer a single file to the bucket
 
 ```bash
 # syntax
-$ gsutil cp <file_name> <bucket_name>
+$ gsutil cp <file_name> <bucket_name/flowcell_name/>
 
 # examples
 $ gsutil cp sample1.R1.fastq.gz gs://davelab_duke_core/HWAXDSXY/
