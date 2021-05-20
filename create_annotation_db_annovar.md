@@ -21,7 +21,7 @@ Following are the required columns to present in the annotation file.
 * End
 * annotation columns
 
-### Filter-based annotation file specification
+### Gene-based annotation file specification
 Following are the required columns to present in the annotation file.
 * Chromosome (e.g. chr1 or 1)
 * Start
@@ -29,7 +29,7 @@ Following are the required columns to present in the annotation file.
 * gene name
 * other annotation columns
 
-### Gene-based annotation file specification
+### Filter-based annotation file specification
 Following are the required columns to present in the annotation file.
 * Chromosome (e.g. chr1 or 1)
 * Start
