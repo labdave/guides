@@ -21,6 +21,12 @@ Following are the required columns to present in the annotation file.
 * End
 * annotation columns
 
+**Notes:**
+1. Recommended format fot the `region` based annotation file is `BED`.
+2. You can use multiple `BED` files in the command line. Please refer to the command line examples for more details.
+3. `Annovar` maintain the order of the multiple `BED` files in the output file as they provided in the command line.
+4. To avoid the confusion of the multiple `BED` file annotation, a `post-processing` script is required to 
+
 ### Gene-based annotation file specification
 Following are the required columns to present in the annotation file.
 * Chromosome (e.g. chr1 or 1)
@@ -69,6 +75,11 @@ gene_based_annotation_file_name --operation g --nastring .
 # region-based annotation test
 perl table_annovar.pl sample.vcf humandb --vcfinput --remove --buildver hg38 --outfile annotated_sample.vcf --protocol 
 region_based_annotation_file_name --operation r --nastring .
+
+# region-based annotation test with bed file as annotation source
+# assume the annotation available in 4th column of the BED file
+perl table_annovar.pl sample.vcf humandb --vcfinput --remove --buildver hg38 --outfile annotated_sample.vcf --protocol 
+bed --operation r -bedfile region_based_annotation_file_name.bed -argument "-colsWanted 4" --nastring .
 
 # function-based annotation test
 perl table_annovar.pl sample.vcf humandb --vcfinput --remove --buildver hg38 --outfile annotated_sample.vcf --protocol 
